@@ -18,7 +18,14 @@ class MainApp extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 0, 66, 66),
           title: "I am Poor".text.color(Vx.white).make().centered(),
         ),
-        body:Center(child: Image(image: AssetImage("lib/assets/images/coal.png"),),), 
+        body:Column(
+          children: [
+            Container(padding: EdgeInsets.only(top: 145),
+              child: Image(image: AssetImage("lib/assets/images/coal.png"),),),
+            Container(padding: EdgeInsets.only(top: 160),
+              child: "- created by Harsh".text.color(Vx.gray500).make())
+          ],
+        ), 
       ),
     );
   }
